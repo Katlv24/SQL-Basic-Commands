@@ -1,0 +1,22 @@
+mysql> show tables;
++----------------------+
+| Tables_in_assignment |
++----------------------+
+| company_detail       |
+| dept                 |
+| emp_new              |
+| employee             |
+| my_view              |
+| new_emp              |
+| school               |
+| stu_dept             |
+| student              |
++----------------------+
+9 rows in set (0.02 sec)
+
+
+mysql> select count(d.gender), b.sh_name, d.gender from stu_dept a, school b, student d
+    -> where a.dp_id = c.dp_id
+    -> and a.sh_ID = d.S_ID
+    -> and b.SH_ID = c.SH_ID
+    -> group by SH_NAME;
